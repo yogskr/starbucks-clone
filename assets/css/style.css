@@ -1,0 +1,313 @@
+@font-face {
+  font-family: "Sodo Sans";
+  src: url(../fonts/sodo-sans-regular.ttf);
+}
+
+@font-face {
+  font-family: "Pike Bold";
+  src: url(../fonts/pike-bold.otf);
+}
+
+@font-face {
+  font-family: "Lander Grande";
+  src: url(../fonts/lander-grande-black.ttf);
+}
+
+/* Universal Styling */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+li,
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: normal;
+}
+
+/* ===================== General Styling Start ===================== */
+:root {
+  --font-sodo: "Sodo Sans", sans-serif;
+  --font-pike: "Pike", sans-serif;
+  --primary-color: #212121;
+  --secondary-color: #ffffff;
+  --footer-primary-color: #212227;
+  --footer-secondary-color: #6b6b79;
+  --hover-color: #287b5f;
+}
+
+.center,
+.center ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+sup {
+  vertical-align: super;
+  font-size: 0.8rem;
+}
+
+button {
+  border: 2px solid var(--secondary-color);
+  color: var(--secondary-color);
+  padding: 0.6rem 1rem;
+  border-radius: 10rem;
+  font-size: 1rem;
+  font-family: var(--font-pike);
+  font-weight: bold;
+}
+
+figure {
+  width: 100%;
+  height: auto;
+}
+
+.text-1,
+.text-2,
+.text-3,
+.text-4 {
+  color: var(--secondary-color);
+  font-family: var(--font-pike);
+}
+
+.text-1 h2,
+.text-2 h2,
+.text-3 h2,
+.text-4 h2 {
+  font-size: 3.3rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.text-1 h4,
+.text-2 h4,
+.text-3 h4,
+.text-4 h4 {
+  font-size: 1.65rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+}
+/* ===================== General Styling End ===================== */
+
+/* ===================== Header Section Styling Start ===================== */
+/* Nav Menu Styling Start */
+nav {
+  padding: 1.3rem 10rem 1.3rem 8rem;
+  box-shadow: 0 2px 2px #dad9d9;
+}
+
+.logo {
+  width: 3.3rem;
+  height: auto;
+}
+
+.nav-container {
+  justify-content: space-between;
+}
+
+.nav-start {
+  gap: 2rem;
+}
+
+.nav-start ul {
+  gap: 1.5rem;
+}
+
+.nav-start ul li a {
+  font-family: var(--font-pike);
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+.nav-end {
+  gap: 3.5rem;
+}
+
+.nav-end ul {
+  gap: 1rem;
+}
+
+.nav-end ul li a {
+  font-family: var(--font-sodo);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.store-location {
+  gap: 0.4rem;
+}
+
+.store-location a {
+  font-family: var(--font-sodo);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.nav-link {
+  color: var(--primary-color);
+}
+
+.link-hover:hover {
+  color: var(--hover-color);
+}
+
+.link-hover a:hover {
+  color: var(--hover-color);
+}
+
+.nav-link span {
+  margin-right: 0.5rem;
+}
+
+.border {
+  border: 1px solid var(--primary-color);
+  padding: 0.4rem 1rem;
+  border-radius: 10rem;
+}
+
+.light {
+  background-color: var(--secondary-color);
+}
+
+.dark {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+/* Nav Menu Styling End */
+/* ===================== Header Section Styling End ===================== */
+
+/* ===================== Main Section Styling Start */
+.main-container {
+  display: grid;
+  row-gap: 2.5rem;
+  padding: 2rem 10rem 0 13rem;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 30rem repeat(3, 1fr);
+  grid-template-areas:
+    "hero-img hero-text"
+    "main-text-1 main-img-1"
+    "main-img-2 main-text-2"
+    "main-text-3 main-img-3"
+    "main-img-4 main-text-4";
+}
+
+.main-container .center {
+  flex-direction: column;
+  padding: 2rem 7rem;
+  gap: 2rem;
+}
+
+.hero-img {
+  grid-area: hero-img;
+  width: 100%;
+  height: 100%;
+}
+
+.text-hero {
+  grid-area: hero-text;
+  background-color: #ef3340;
+  color: var(--secondary-color);
+  font-family: var(--font-pike);
+  font-size: 1.4rem;
+}
+
+.text-hero h1 {
+  font-weight: 600;
+}
+
+.text-hero h4 {
+  text-align: center;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.main-img-1 {
+  grid-area: main-img-1;
+}
+
+.text-1 {
+  grid-area: main-text-1;
+}
+
+.bg-color-1 {
+  background-color: #006241;
+}
+
+.main-img-2 {
+  grid-area: main-img-2;
+}
+
+.text-2 {
+  grid-area: main-text-2;
+}
+
+.bg-color-2 {
+  background-color: #b37697;
+}
+
+.main-img-3 {
+  grid-area: main-img-3;
+}
+
+.text-3 {
+  grid-area: main-text-3;
+}
+
+.bg-color-3 {
+  background-color: #76232f;
+}
+
+.main-img-4 {
+  grid-area: main-img-4;
+}
+
+.text-4 {
+  grid-area: main-text-4;
+}
+
+.bg-color-4 {
+  background-color: #1e3932;
+}
+
+.main-text-section {
+  padding: 4rem 38rem 1.5rem 38rem;
+  text-align: center;
+  line-height: 1.5;
+  font-size: 0.9rem;
+  font-family: var(--font-sodo);
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+.main-text-section p a {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.main-text-section p a:hover {
+  text-decoration: none;
+}
+/* ===================== Main Section Styling End */
